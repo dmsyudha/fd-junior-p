@@ -1,0 +1,151 @@
+
+
+
+
+close() {
+            $('#hide_div_collapse').show();
+            // $('#hide_div_collapse').show();
+            this.showScreen('ProductScreen');
+        }
+        async sequence_popup(order_id,pos){
+        }
+        back_click (){
+            this.kitchen_screen_name = false;
+            $('#hide_div_collapse').show();
+            // $('#hide_div_collapse').show();
+            this.showScreen('ProductScreen');
+        }
+
+close() {
+            $('#hide_div_collapse').show();
+            // $('#hide_div_collapse').show();
+            this.showScreen('ProductScreen');
+        }
+
+<t t-if="line.is_optional_product">
+                                        <t t-esc="Math.round(line.quantity * Math.pow(10, env.pos.dp['Product Unit of Measure'])) / Math.pow(10, env.pos.dp['Product Unit of Measure']) > 1 ? 
+                                        Math.round(line.quantity * Math.pow(10, env.pos.dp['Product Unit of Measure'])) / Math.pow(10, env.pos.dp['Product Unit of Measure']) 
+                                        : ''"/>
+                                    </t>
+                                    <t t-else="">
+                                        <t t-esc="Math.round(line.quantity * Math.pow(10, env.pos.dp['Product Unit of Measure'])) / Math.pow(10, env.pos.dp['Product Unit of Measure'])"/>
+                                    </t>
+
+<t t-if="line.is_optional_product">
+                                        <t t-esc="Math.round(line.quantity * Math.pow(10, env.pos.dp['Product Unit of Measure'])) / Math.pow(10, env.pos.dp['Product Unit of Measure']) > 1 ? 
+                                        Math.round(line.quantity * Math.pow(10, env.pos.dp['Product Unit of Measure'])) / Math.pow(10, env.pos.dp['Product Unit of Measure']) 
+                                        : ''"/>
+                                    </t>
+                                    <t t-else="">
+                                        <t t-esc="Math.round(line.quantity * Math.pow(10, env.pos.dp['Product Unit of Measure'])) / Math.pow(10, env.pos.dp['Product Unit of Measure'])"/>
+                                    </t>
+
+let order = this.newOrder;
+                        if (this.env.pos.config.pricing_method == 'percentage') {
+                            var sub_total = round_pr(order.get_orderlines().reduce((function(sum, orderLine) {
+                                return sum + ((orderLine.product.id != surcharge_product.id) ? orderLine.get_price_without_tax() : 0);
+                            }), 0), this.env.pos.currency.rounding);
+                            if(sub_total) {
+                                surcharge = sub_total * this.env.pos.config.amount / 100;
+                            }
+                        else{
+                        } else {
+                            surcharge = this.env.pos.config.amount;
+                        }
+
+.pos .pos-rightheader > * {
+    border-right: 1px solid #7F82AC;
+}
+.pos .pos-rightheader .header-button{
+    border-right: 1px solid #7F82AC;
+    border-left: 1px solid #7F82AC;
+}
+.pos .pos-rightheader .header-button:last-child{
+    border-left:  1px solid #7F82AC;
+}
+.ticket-button:hover {
+    background: #585b78;
+}
+.pos .leftpane .subpads .actionpad .pay{
+    background-color: #7F82AC;
+}
+
+<xpath expr="//div[contains(@class, 'pos-topheader')]" position="attributes">
+            <attribute name="t-att-class">{ oe_hidden: state.uiState !== 'READY' }</attribute>
+            <attribute name="t-att-style">'background: #7f82AC;'</attribute>
+        </xpath>
+
+<t t-if="line.is_optional_product">
+                                                    <t t-esc="Math.round(line.qty * Math.pow(10, env.pos.dp['Product Unit of Measure'])) / Math.pow(10, env.pos.dp['Product Unit of Measure']) > 1 ? 
+                                                    Math.round(line.qty * Math.pow(10, env.pos.dp['Product Unit of Measure'])) / Math.pow(10, env.pos.dp['Product Unit of Measure']) 
+                                                    : ''"/>
+                                                </t>
+                                                <t t-else="">
+                                                    <t t-esc="Math.round(line.qty * Math.pow(10, env.pos.dp['Product Unit of Measure'])) / Math.pow(10, env.pos.dp['Product Unit of Measure'])"/>
+                                                </t>
+
+<xpath expr="//li[contains(@class, 'orderline')]" position="attributes">
+            <attribute name="t-on-click">selectLine</attribute>
+            <attribute name="t-att-class">addedClasses</attribute>
+            <attribute name="t-att-style">
+                    props.line.product.is_optional_product ?
+                    (props.line.get_kitchen_sent_date() ?
+                    'border-left: solid 6px #A5A7C4; color: #A5A7C4; padding-left: 9px;' :
+                    'border-left: solid 6px #7F82AC; color: #7F82AC; padding-left: 9px;') :
+                    (props.line.get_kitchen_sent_date() ?
+                    'border-left: solid 6px black; color: black; padding-left: 9px;' :
+                    'border-left: solid 6px #6EC89B; color: #6EC89B; padding-left: 9px;')
+            </attribute>
+        </xpath>
+
+<!-- <t t-if="props.line.product.is_optional_product">
+                        <t t-if="props.line.get_quantity_str() > 1">
+                            <t t-esc="props.line.get_quantity_str()" />
+                        </t>
+                    </t>
+                    <t t-else=""> -->
+                    <t t-esc="props.line.get_quantity_str()" />
+                    <!-- </t> -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <!-- Template baru yang meng-extend dari ClientDetailsEdit -->
+    <t t-name="ClientDetailsEditNew" t-inherit="point_of_sale.ClientDetailsEdit" t-inherit-mode="extension" owl="1">
+            <xpath expr="//span[@class='label' and text()='Street']" position="replace">
+                <span class="label" style="color: black;">Street</span>
+            </xpath>
+             <xpath expr="//span[@class='label' and text()='City']" position="replace">
+                <span class="label" style="color: black;">City</span>
+            </xpath>
+             <xpath expr="//span[@class='label' and text()='Postcode']" position="replace">
+                <span class="label" style="color: black;">Postcode</span>
+            </xpath>
+             <xpath expr="//span[@class='label' and text()='State']" position="replace">
+                <span class="label" style="color: black;">State</span>
+            </xpath>
+             <xpath expr="//span[@class='label' and text()='Country']" position="replace">
+                <span class="label" style="color: black;">Country</span>
+            </xpath>
+            <xpath expr="//span[@class='label' and text()='Language']" position="replace">
+                <span class="label" style="color: black;">Language</span>
+            </xpath>
+            <xpath expr="//span[@class='label' and text()='Email']" position="replace">
+                <span class="label" style="color: black;">Email</span>
+            </xpath>
+            <xpath expr="//span[@class='label' and text()='Phone']" position="replace">
+                <span class="label" style="color: black;">Phone</span>
+            </xpath>
+            <xpath expr="//span[@class='label' and text()='Barcode']" position="replace">
+                <span class="label" style="color: black;">Barcode</span>
+            </xpath>
+             <xpath expr="//span[@class='label' and text()='Tax ID']" position="replace">
+                <span class="label" style="color: black;">Tax ID</span>
+            </xpath>
+            <xpath expr="//span[@class='label' and text()='Pricelist']" position="replace">
+                <span class="label" style="color: black;">Pricelist</span>
+            </xpath>
+    </t>
+</templates>
+
+
+			
